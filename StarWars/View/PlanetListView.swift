@@ -11,6 +11,7 @@ struct PlanetListView: View {
     // MARK: PROPERTIES
     
     let planet: PlanetsResult?
+    
     // MARK: BODY
     var body: some View {
         HStack(alignment: .center, spacing: 16) {

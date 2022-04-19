@@ -19,12 +19,8 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(viewModel.planets?.results ?? [], id: \.self){ planet in
-                    NavigationLink {
-                        PlanetDetailView(planet: planet)
-                    } label: {
-                        PlanetListView(planet: planet)
-                            .padding()
-                    }//: LINK
+                    PlanetListView(planet: planet)
+                        .padding()
                 }//: LOOP
             }//: LIST
             .navigationBarTitle("Planets")
