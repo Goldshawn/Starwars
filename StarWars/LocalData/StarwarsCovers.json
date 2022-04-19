@@ -1,0 +1,37 @@
+[
+  {
+    "id" : 1,
+    "name" : "cover-darth-vader",
+    "character_name" : "Darth Vader"
+  },
+  {
+    "id" : 2,
+    "name" : "cover-darth-sidious",
+    "character_name" : "Darth Sidious"
+  },
+  {
+    "id" : 3,
+    "name" : "cover-Obiwan",
+    "character_name" : "Obiwan Kenobi"
+  },
+  {
+    "id" : 4,
+    "name" : "cover-Anakin",
+    "character_name" : "Anakin"
+  },
+  {
+    "id" : 5,
+    "name" : "cover-Yoda",
+    "character_name" : "Yoda"
+  },
+  {
+    "id" : 6,
+    "name" : "cover-Quigon-Jin",
+    "character_name" : "Quigon Jinn"
+  },
+  {
+    "id" : 7,
+    "name" : "cover-Bobba-Fett",
+    "character_name" : "Bobba Fett"
+  }
+]
