@@ -18,6 +18,7 @@ struct Constants {
 }
 
 // MARK: URLExtensions
+// created this first. turned out to be the major switcher on the app.
 enum URLExtensions: String {
     case planets
     case starships

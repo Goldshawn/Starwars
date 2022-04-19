@@ -8,6 +8,9 @@
 import Foundation
 
 extension Bundle{
+    // this was needed as i wanted to display pictures of some characters on the character page
+    // TODO: align the response from the api, such that as soon as the name is selected the image is shown (Down side, the app would be too large as the images are not loaded but exist in the bundle)
+    /// extension to read json data from the app bundle.
     func decodeInfo<T: Codable>(_ file: String) -> T{
         //1. Locate the JSON File
         guard let url = self.url(forResource: file, withExtension: nil) else{

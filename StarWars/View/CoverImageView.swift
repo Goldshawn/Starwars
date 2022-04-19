@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// while working on the project, it occured to me.... Show the image of Darth Vader. this was the quick view to quell said urge
 struct CoverImageView: View {
     // MARK: PROPERTIES
     

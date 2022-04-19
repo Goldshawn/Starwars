@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+// this is the main view for non ios 14 or 15 users. Needed to seperate the Main Views to make the Onboarding work for iOS 14 and up devices a
 struct MainForLowerApps: View {
     let peopleViewModel: InformationViewModel = {
         let session = URLSession(configuration: URLSessionConfiguration.default)

@@ -27,22 +27,22 @@ class NetworkService: NetworkServiceProtocol {
         request(method: method, completion: completion)
     }
     
-    ///This function is called to get planetDetails, returns the approprait detail in response or Network Error
+    ///This function is called to get vehicleDetails, returns the approprait detail in response or Network Error
     public func getVehicleInformation(completion: @escaping((Result<VehiclesModel, NetworkError>) -> Void)) {
         request(method: method, completion: completion)
     }
     
-    ///This function is called to get planetDetails, returns the approprait detail in response or Network Error
+    ///This function is called to get filmsDetails, returns the approprait detail in response or Network Error
     public func getFilmsInformation(completion: @escaping((Result<FilmsModel, NetworkError>) -> Void)) {
         request(method: method, completion: completion)
     }
     
-    ///This function is called to get planetDetails, returns the approprait detail in response or Network Error
+    ///This function is called to get speciesDetails, returns the approprait detail in response or Network Error
     public func getSpeciesInformation(completion: @escaping((Result<SpeciesModel, NetworkError>) -> Void)) {
         request(method: method, completion: completion)
     }
     
-    ///This function is called to get planetDetails, returns the approprait detail in response or Network Error
+    ///This function is called to get starshipDetails, returns the approprait detail in response or Network Error
     public func getStarshipInformation(completion: @escaping((Result<StarShipsModel, NetworkError>) -> Void)) {
         request(method: method, completion: completion)
     }
@@ -52,6 +52,7 @@ class NetworkService: NetworkServiceProtocol {
         request(method: method, completion: completion)
     }
     
+    /// this is the private function that would create the URLRequest. Basically manages the header and body of the api call
     private func request<T: Codable>(method: Method,
                                   completion: @escaping((Result<T, NetworkError>) -> Void)) {
         //ensure a valid url is formed
@@ -67,7 +68,7 @@ class NetworkService: NetworkServiceProtocol {
         
         call(with: request, completion: completion)
     }
-    
+    /// this is the private function that would calles the API endpoint. The information is then encoded to be used later in the app
     private func call<T: Codable>(with request: URLRequest,
                                   completion: @escaping((Result<T, NetworkError>) -> Void)) {
         
@@ -85,9 +86,11 @@ class NetworkService: NetworkServiceProtocol {
             }
             
             do {
+                // this saves the data received to the path
+                // can be updated to be done somewhere else.
+                PersistenceManager().persistData(dataToSave: responseData, path: self.urlExtension)
                 //tries to parse response
                 let responseModel = try JSONDecoder().decode(T.self, from: responseData)
-                PersistenceManager().persistData(dataToSave: responseData, path: self.urlExtension)
                 completion(.success(responseModel))
             } catch {
                 //unable to parse response, return invalid response

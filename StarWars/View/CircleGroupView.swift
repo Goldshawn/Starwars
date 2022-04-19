@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// a simple view to show halos behind Darth Vader on the onboarding view
 struct CircleGroupView: View {
     //    MARK: Property
         @State var shapeColor: Color

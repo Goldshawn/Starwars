@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// This is basically an animated view to keep things interesting on the main views that has not been designed
 struct MotionAnimationView: View {
     //MARK: PROPERTIES
     

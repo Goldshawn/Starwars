@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//addapting this app to use Swift UI and cater for iOS 13 wasnt as easy as i thought it would be. This onboarding screen is my little reward to the people that choose to update thier devices
 @available(iOS 14.0, *)
 struct OnboardingView: View {
 //    MARK: - Property

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// this is simmilar to the UITableViewCell. a minor design for the List item itself
 struct PlanetListView: View {
     // MARK: PROPERTIES
     

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// I really do not have an iOS 13 device. it works in simulator, hope it works every where also.... fingers crossed
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
